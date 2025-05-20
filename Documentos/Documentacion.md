@@ -1,4 +1,6 @@
-# Caso 2 Base de Datos I Voto Pura Vida: Documentacion
+# Caso 3 Base de Datos I 
+# Voto Pura Vida: Sistema de Voto Electronico y Crowdfunding
+# Documentacion
 
 ## Integrantes
 * Santiago Calderón Zúñiga, 2024089232
