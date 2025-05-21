@@ -19,15 +19,65 @@
 - [8. Pruebas](#8-pruebas)
 
 ## 1. Introduccion
+En el presente documento se explicaran las relaciones y el modelo en general de la base de datos, la API y el dashboard de la demo del micitt. Esta demo presenta el sistema de voto electronico conocido como "Voto Pura Vida" un sistema de votacion que permitiria al gobierno realizar una gran cantidad de estudios electorales no solo para votaciones en general, sino tambien para aspectos de interes gubernamental como podrian ser encuestas, consultas publicas, toma de decisiones en instituciones, validacion ciudadana de propuestas o proyectos, y direccionamiento de politicas. En cada seccion del documento se explicaran los modulos principales del sistema que serian: diseno de la base de datos, implementacion de la API y dashboard. Esto ademas de aspectos necesarios para entender el sistema y verificar su validez, esto apartados serian: arquitectura del sistema, instalacion y configuracion, seguridad y pruebas.
+
+---
 
 ### 1.1 Descripcion del Proyecto
 
+Costa Rica no cuenta actualmente con un sistema oficial de voto electrónico como herramienta electoral, y su implementación enfrenta desafíos políticos, constitucionales y legales que requieren atención cuidadosa. Sin embargo, el concepto del voto electrónico va mucho más allá de las elecciones nacionales: puede ser utilizado para encuestas, consultas públicas, toma de decisiones en instituciones, validación ciudadana de propuestas o proyectos, y direccionamiento de políticas. En una sociedad democrática y digital, la participación no puede seguir limitada únicamente a eventos electorales cada varios años.
+
+El objetivo del proyecto es crear una plataforma de voto electrónico que sea accesible, segura y multifuncional. Esta herramienta permitirá a ciudadanos y organizaciones registrar propuestas de diversa índole, desde decisiones administrativas hasta proyectos municipales o reformas legales, y someterlas a votación de públicos específicos. Las votaciones serán parametrizables, con reglas claras y mecanismos de validación, alcanzando poblaciones segmentadas según diversos criterios como edad, ubicación, afiliación o profesión. Este sistema busca promover un entorno donde la voz ciudadana pueda incidir de manera ágil y directa en múltiples esferas.
+
+El resultado esperado es una Costa Rica más participativa, con una ciudadanía empoderada y con herramientas modernas para expresarse, influir y decidir. Se fomentará una cultura de transparencia, donde todas las votaciones serán públicas en contenido y resultados, pero asegurando que los votos individuales sean siempre anónimos. La plataforma brindará reportes en tiempo real, será altamente segura, y ofrecerá un respaldo técnico y criptográfico que garantice la integridad de cada voto emitido. Esto dará agilidad competitiva al país, permitiendo decisiones más rápidas, mejor informadas y colectivamente validadas.
+
+---
+
 ### 1.2 Objetivos
+
+* Desarrollar un sistema de voto electoral seguro con autenticacion, cifrado y anonimato: Esto permitira a los ciudadanos y organizaciones registrar propuestas diversas y someterlas a votacion de publicos especificos, manteniendo la integridad del proceso y el anonimato de los votantes.
+
+* Implementar un sistema de identidad digital robusto: Esto inlcuiria una prueba de vida y cifrado avanzado para garantizar la legitimidad de los participantes y la validez de cada voto emitido.
+
+* Desarrollar un modulo de crowfunding inetgrado: Esto permitiria financiar colectivamente proyectos de innovacion y emprendimiento, con mecanismos de validacion, supervision ciudadana y distribucion transparente de fondos.
+
+* Establecer una plataforma parametizable y flexible: Esto permitira configurar diferentes tipos de votaciones con reglas personalizadas, segmentacion de votos y criterios de validacion especificos segun las necesidades de cada caso.
+
+* Desarrollar un sistema de visualizacion de resultados (Dashboard): Basicamente en tiempo real que permitira analizar datos de votacion de forma transparente, facilitando la toma de decisiones informadas y promoviendo la participacion ciudadana activa en diversos procesos democraticos.
 
 ### 1.3 Alcance
 
+
+
 ### 1.4 Tecnologias Utilizadas
 
+### Base de Datos
+- **Microsoft SQL Server Management Studio (SSMS)**: Para el diseño, desarrollo y administración de la base de datos relacional.
+- **SQL Server 2019**: Como motor de base de datos principal para almacenamiento y procesamiento de datos.
+- **Flyway**: Herramienta para control de versiones de la base de datos, permitiendo migraciones controladas y versionadas.
+
+### API Serverless
+- **Python 3.9+**: Como lenguaje de programación principal para el desarrollo del backend.
+- **FastAPI**: Framework moderno de Python para crear APIs RESTful con soporte para operaciones asíncronas y documentación automática.
+- **SQLAlchemy**: ORM (Object-Relational Mapping) para interactuar con la base de datos desde Python.
+- **Pydantic**: Para validación de datos y serialización/deserialización.
+- **PyODBC**: Driver para conectar Python con SQL Server.
+- **Uvicorn**: Servidor ASGI para ejecutar la aplicación FastAPI localmente.
+
+### Dashboard
+- **Power BI**: Plataforma de Microsoft para la creación de visualizaciones interactivas y dashboards analíticos.
+- **DAX**: Lenguaje de fórmulas para cálculos avanzados en Power BI.
+- **Conexión DirectQuery**: Para visualización de datos en tiempo real desde SQL Server.
+
+### Seguridad
+- **JWT (JSON Web Tokens)**: Para autenticación y autorización segura.
+- **Algoritmos de cifrado**: AES-256 y RSA para cifrado de datos sensibles.
+- **Hash seguro**: Bcrypt para el almacenamiento seguro de contraseñas.
+
+### Herramientas de Desarrollo
+- **Git & GitHub**: Para control de versiones del código y colaboración en equipo.
+- **Visual Studio Code**: Como entorno de desarrollo integrado para la codificación.
+- **Postman/Swagger**: Para pruebas y documentación de la API.
 
 ## 2. Arquitectura del Sistema
 
