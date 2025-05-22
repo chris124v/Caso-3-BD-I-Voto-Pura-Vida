@@ -108,8 +108,10 @@ Este prototipo se desarrollara como demostracion para el MICITT, enfocandose esp
 
 
 ## 3. Base de Datos
+En este apartado nos enfocaremos enteramente en lo que corresponde al diseño de la base de datos. Como se menciono anteriormente para realizar este diseño nos centraremos en un modelo relacion usando "SQL Server", esto mediante el motor de base de datos de "SQL Server 2019" y "SSMS". Una vez entendido esto durante el apartado mencionaremos todas las entidades de la base de datos, el diagrama completo, nuestra division en grupos funcionales que nos ayudara a entender como se dividien propiamente las entidades y finalmente la descripcion de cada una de las tablas.
 
 ### 3.1 Entidades "Votu"
+En este apartado expondremos el listado completo de todas las "entidades" o tablas de la base de datos. Destacar que usaremos el prefijo "Votu" para definir todos los nombres de las entidades. Por ejemplo "VotuUsers", esto para seguir una categorizacion y tener un mejor manejo visual del diseño. 
 
 ### 3.2 Diagrama Entidad-Relacion
 
