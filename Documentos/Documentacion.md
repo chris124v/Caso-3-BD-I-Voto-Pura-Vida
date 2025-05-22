@@ -47,37 +47,56 @@ El resultado esperado es una Costa Rica más participativa, con una ciudadanía 
 
 ### 1.3 Alcance
 
+El alcance del caso 3 "Voto Pura Vida" comprende el desarrollo de un prototipo funcional que incluye las siguientes cuestiones:
 
+1. **Diseño e implementación de una base de datos**: Esta sera relacional, y ser el soporte los requerimientos funcionales del sistema de voto electronico y el módulo de crowdfunding, incluyendo:
+   - Estructura para gestion de usuarios con multiples factores de autenticación.
+   - Almacenamiento seguro de propuestas y proyectos.
+   - Sistema de votacion con anonimato garantizado.
+   - Mecanismos de crowdfunding con gestion de inversiones y desembolsos.
+
+2. **Desarrollo de una API serverless**: Expondra la funcionalidad core del sistema, implementando:
+   - Endpoints para gestion de propuestas mediante procedimientos almacenados.
+   - Endpoints para votacion y consulta mediante ORM.
+   - Mecanismos de seguridad y validacion.
+   - Soporte para multiples tipos de votaciones configurables.
+
+3. **Creacion de un dashboard de visualizacion** Permite:
+   - Consulta de resultados de votaciones en tiempo real.
+   - Visualizacion de datos demográficos de votantes, siempre con anonimato.
+   - Seguimiento de inversiones y estado de proyectos del modulo de crowdfunding.
+
+Este prototipo se desarrollara como demostracion para el MICITT, enfocandose especificamente en el caso de uso del crowdfunding.
 
 ### 1.4 Tecnologias Utilizadas
 
 ### Base de Datos
-- **Microsoft SQL Server Management Studio (SSMS)**: Para el diseño, desarrollo y administración de la base de datos relacional.
+- **Microsoft SQL Server Management Studio (SSMS)**: Para el diseño, desarrollo y administracion de la base de datos relacional.
 - **SQL Server 2019**: Como motor de base de datos principal para almacenamiento y procesamiento de datos.
 - **Flyway**: Herramienta para control de versiones de la base de datos, permitiendo migraciones controladas y versionadas.
 
 ### API Serverless
-- **Python 3.9+**: Como lenguaje de programación principal para el desarrollo del backend.
-- **FastAPI**: Framework moderno de Python para crear APIs RESTful con soporte para operaciones asíncronas y documentación automática.
+- **Python 3.9+**: Sera el lenguaje de programacion principal para el desarrollo del backend.
+- **FastAPI**: Framework moderno de Python para crear APIs RESTful, esto soporte para operaciones asincronas y documentación automatica.
 - **SQLAlchemy**: ORM (Object-Relational Mapping) para interactuar con la base de datos desde Python.
-- **Pydantic**: Para validación de datos y serialización/deserialización.
+- **Pydantic**: Para validación de datos y serializacion/deserializacion.
 - **PyODBC**: Driver para conectar Python con SQL Server.
-- **Uvicorn**: Servidor ASGI para ejecutar la aplicación FastAPI localmente.
+- **Uvicorn**: Servidor ASGI para ejecutar la aplicacion FastAPI localmente.
 
 ### Dashboard
-- **Power BI**: Plataforma de Microsoft para la creación de visualizaciones interactivas y dashboards analíticos.
-- **DAX**: Lenguaje de fórmulas para cálculos avanzados en Power BI.
-- **Conexión DirectQuery**: Para visualización de datos en tiempo real desde SQL Server.
+- **Power BI**: Plataforma de Microsoft para la creacion de visualizaciones interactivas y dashboards analíticos.
+- **DAX**: Lenguaje de formulas para cálculos avanzados en Power BI.
+- **Conexion DirectQuery**: Para visualizacion de datos en tiempo real desde SQL Server.
 
 ### Seguridad
-- **JWT (JSON Web Tokens)**: Para autenticación y autorización segura.
+- **JWT (JSON Web Tokens)**: Para autenticacion y autorizacion segura.
 - **Algoritmos de cifrado**: AES-256 y RSA para cifrado de datos sensibles.
 - **Hash seguro**: Bcrypt para el almacenamiento seguro de contraseñas.
 
 ### Herramientas de Desarrollo
-- **Git & GitHub**: Para control de versiones del código y colaboración en equipo.
-- **Visual Studio Code**: Como entorno de desarrollo integrado para la codificación.
-- **Postman/Swagger**: Para pruebas y documentación de la API.
+- **Git & GitHub**: Para control de versiones del codigo y colaboración en equipo.
+- **Visual Studio Code**: Como entorno de desarrollo integrado para la codificacion.
+- **Postman/Swagger**: Para pruebas y documentacion de la API.
 
 ## 2. Arquitectura del Sistema
 
