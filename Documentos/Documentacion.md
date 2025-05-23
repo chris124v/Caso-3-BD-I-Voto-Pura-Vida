@@ -111,13 +111,39 @@ Este prototipo se desarrollara como demostracion para el MICITT, enfocandose esp
 En este apartado nos enfocaremos enteramente en lo que corresponde al diseño de la base de datos. Como se menciono anteriormente para realizar este diseño nos centraremos en un modelo relacion usando "SQL Server", esto mediante el motor de base de datos de "SQL Server 2019" y "SSMS". Una vez entendido esto durante el apartado mencionaremos todas las entidades de la base de datos, el diagrama completo, nuestra division en grupos funcionales que nos ayudara a entender como se dividien propiamente las entidades y finalmente la descripcion de cada una de las tablas.
 
 ### 3.1 Entidades "Votu"
-En este apartado expondremos el listado completo de todas las "entidades" o tablas de la base de datos. Destacar que usaremos el prefijo "Votu" para definir todos los nombres de las entidades. Por ejemplo "VotuUsers", esto para seguir una categorizacion y tener un mejor manejo visual del diseño. 
+En este apartado expondremos el listado completo de todas las "entidades" o tablas de la base de datos. Destacar que usaremos el prefijo "Votu" para definir todos los nombres de las entidades. Por ejemplo "VotuUsers", esto para seguir una categorizacion y tener un mejor manejo visual del diseño.
+
+1. Countries ✓
+   * Provinces ✓
+   * Cantones ✓
+   * Distritos ✓
+   * Adresses ✓
+2.
 
 ### 3.2 Diagrama Entidad-Relacion
 
 ### 3.3 Grupos Funcionales de la Base de Datos 
 
+1. Geolocalizacion: En este apartado nos encontramos con las tablas de countries, provinces, cantones y distritos. Este grupo funcional nos ayudara a dividir los votantes por regiones. Esto ademas de darnos propiamente la direccion de los usuarios. 
+
 ### 3.4 Descripcion de Tablas y Grupos Funcionales 
+En este apartado se explicaran las tablas de cada uno de los grupos funcionales, describiendo su funcionamiento y como operan.
+
+#### 3.4.1 Grupo Geolocalizacion
+Este grupo funcional nos permite localizar la direccion de los usuarios, esto para tenerlo como datos en su perfil de usuario, direccion de facturacion en caso de inversion y el aspecto mas importante que corresponde propiamente a la division regional de los votantes en el pais. Este grupo funcional nos ayudara bastante en lo que se refiere al dashboard, esto dado a que nos permitira seccionar los resultados.
+
+#### 3.4.1.1 VotuCountries
+En esta tabla de paises dado la especificacion del proyecto tendremos solo a Costa Rica inicialmente. Sin embargo, hay que tomar en cuenta que "en una fase posterior, extranjeros podrán registrarse, condicionados por listas blancas de IPs y países permitidos". Consecuentemente añadimos un apartado de "allowsVoting" para ver si la persona que se quiere registrar o votar es parte de un pais permitido. 
+
+| Nombre de columna | Tipo de datos | Longitud | Identidad | Incremento de identidad | Permitir valores NULL | Valor predeterminado |
+|-------------------|---------------|----------|-----------|-------------------------|----------------------|---------------------|
+| 🔑 countryId | int | 4 | ✓ | 1 | □ | |
+| name | varchar(40) | 40 | □ | | □ | |
+| createdAt | datetime | 8 | □ | | □ | |
+| updatedAt | datetime | 8 | □ | | □ | |
+| allowsVoting | bit | 1 | □ | | □ | 1 |
+
+
 
 
 ## 4. Implementacion del API
