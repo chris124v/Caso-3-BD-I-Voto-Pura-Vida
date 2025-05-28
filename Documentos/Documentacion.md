@@ -143,6 +143,51 @@ En esta tabla de paises dado la especificacion del proyecto tendremos solo a Cos
 | updatedAt | datetime | 8 | □ | | □ | |
 | allowsVoting | bit | 1 | □ | | □ | 1 |
 
+#### 3.4.1.2 VotuProvinces
+Como se menciono anteriormente dada la naturaleza del proyecto que se basa en Costa Rica, tenemos la tabla de las 7 provincias de Costa Rica. Esto nuevamente para seccionar resultados y hacer analisis de los mismos segun la direccion de los votantes. 
+
+| Nombre de columna | Tipo de datos | Longitud | Identidad | Incremento de identidad | Permitir valores NULL | Valor predeterminado |
+|-------------------|---------------|----------|-----------|-------------------------|----------------------|---------------------|
+| 🔑 provinceId | int | 4 | ✓ | 1 | □ | |
+| name | varchar(40) | 40 | □ | | □ | |
+| createdAt | datetime | 8 | □ | | ✓ | |
+| updatedAt | datetime | 8 | □ | | □ | |
+| 🔗 countryID | int | 4 | □ | | □ | |
+
+#### 3.4.1.3 VotuCantones
+En este apartado se realiza la division de las provincias en cantones esto para un posterior analisis de resultados y propiamente para tener la direccion de los usuarios.
+
+| Nombre de columna | Tipo de datos | Longitud | Identidad | Incremento de identidad | Permitir valores NULL | Valor predeterminado |
+|-------------------|---------------|----------|-----------|-------------------------|----------------------|---------------------|
+| 🔑 cantonesId | int | 4 | ✓ | 1 | □ | |
+| name | varchar(40) | 40 | □ | | □ | |
+| createdAt | datetime | 8 | □ | | ✓ | |
+| updatedAt | datetime | 8 | □ | | ✓ | |
+| 🔗 provinceID | int | 4 | □ | | □ | |
+
+#### 3.4.1.4 VotuDistritos 
+En esta tabla de distritos realizamos la posterior division de los cantonces, esto nuevamente con la intencion de seccionar resultados de votaciones en analisis futuros.
+
+| Nombre de columna | Tipo de datos | Longitud | Identidad | Incremento de identidad | Permitir valores NULL | Valor predeterminado |
+|-------------------|---------------|----------|-----------|-------------------------|----------------------|---------------------|
+| 🔑 distritosId | int | 4 | ✓ | 1 | □ | |
+| name | varchar(40) | 40 | □ | | □ | |
+| createdAt | datetime | 8 | □ | | □ | |
+| updatedAt | datetime | 8 | □ | | ✓ | |
+| 🔗 cantonesID | int | 4 | □ | | □ | |
+
+#### 3.4.1.5 VotuAdresses
+Esta seria la tabla final del grupo funcional de geolocalizacion, aqui basicamente definimos la direccion especifica del usuario usando tanto la descripcion de su "direccion" y el tipo de dato geography con "point" para establecer una direccion en especifico.
+
+| Nombre de columna | Tipo de datos | Longitud | Identidad | Incremento de identidad | Permitir valores NULL | Valor predeterminado |
+|-------------------|---------------|----------|-----------|-------------------------|----------------------|---------------------|
+| 🔑 addressId | int | 4 | ✓ | 1 | □ | |
+| postalCode | varchar(10) | 10 | □ | | □ | |
+| direccion | varchar(300) | 300 | □ | | ✓ | |
+| createdAt | datetime | 8 | □ | | □ | |
+| updatedAt | datetime | 8 | □ | | ✓ | |
+| point | geography | -1 | □ | | □ | |
+| 🔗 distritoID | int | 4 | □ | | □ | |
 
 
 
