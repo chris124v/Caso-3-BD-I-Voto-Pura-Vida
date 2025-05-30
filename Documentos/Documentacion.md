@@ -124,7 +124,14 @@ En este apartado expondremos el listado completo de todas las "entidades" o tabl
 
 ### 3.3 Grupos Funcionales de la Base de Datos 
 
-1. Geolocalizacion: En este apartado nos encontramos con las tablas de countries, provinces, cantones y distritos. Este grupo funcional nos ayudara a dividir los votantes por regiones. Esto ademas de darnos propiamente la direccion de los usuarios. 
+1. Geolocalizacion: En este apartado nos encontramos con las tablas de countries, provinces, cantones y distritos. Este grupo funcional nos ayudara a dividir los votantes por regiones. Esto ademas de darnos propiamente la direccion de los usuarios.
+2. Usuarios y Identidades: Barquero
+3. Roles y Permisos: Barquero
+4. Sistema: Logs, Media : Baldi
+5. Votos, Organizaciones Y Resultados: Chris
+6. Seguridad: Santi
+7. Transacciones y Pagos: Baldi
+8. Inteligencia Artificial: Santi
 
 ### 3.4 Descripcion de Tablas y Grupos Funcionales 
 En este apartado se explicaran las tablas de cada uno de los grupos funcionales, describiendo su funcionamiento y como operan.
