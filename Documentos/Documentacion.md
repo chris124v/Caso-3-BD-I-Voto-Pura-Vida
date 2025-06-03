@@ -6,6 +6,7 @@
 * Santiago Calderón Zúñiga, 2024089232
 * Adrián Josué Barquero Sánchez, 2024146907
 * Christopher Daniel Vargas Villalta, 2024108443
+* Andres Baldi Mora, 2024088934
 
 ## Tabla de Contenidos
 
