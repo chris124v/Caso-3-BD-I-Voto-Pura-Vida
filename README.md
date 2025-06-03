@@ -5,3 +5,4 @@ En este repositorio se encontrara toda documentación técnica, scripts, diagram
 * Christopher Daniel Vargas Villalta, 2024108443
 * Adrian Josue Barquero Sanchez, 2024146907
 * Santiago Calderón Zúñiga, 2024089232
+* Andres Baldi Mora, 2024088934
