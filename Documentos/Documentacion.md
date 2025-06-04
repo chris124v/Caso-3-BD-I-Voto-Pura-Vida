@@ -126,13 +126,19 @@ En este apartado expondremos el listado completo de todas las "entidades" o tabl
 ### 3.3 Grupos Funcionales de la Base de Datos 
 
 1. Geolocalizacion: En este apartado nos encontramos con las tablas de countries, provinces, cantones y distritos. Este grupo funcional nos ayudara a dividir los votantes por regiones. Esto ademas de darnos propiamente la direccion de los usuarios.
-2. Usuarios y Identidades: Barquero
-3. Roles y Permisos: Barquero
-4. Sistema: Logs, Media : Baldi
-5. Votos, Organizaciones Y Resultados: Chris
-6. Seguridad: Santi
-7. Transacciones y Pagos: Baldi
-8. Inteligencia Artificial: Santi
+2. Usuarios e Identidades: Este grupo funcional es sobre la gestión integral de usuarios, sus identidades digitales y procesos de validación. Asimismo implementa el registro robusto con MFA, prueba de vida y validación biométrica. Gestiona la revalidación periódica y asegura identidades únicas y verificadas.
+3. Roles y Permisos: Este grupo es basicamente creado para el control de acceso y autorización en el sistema. Asimismo controla quién puede (crear propuestas*), validar identidades, configurar votaciones, acceder al dashboard, etc. Base para la seguridad por capas.
+4. Seguridad y Criptografia: Esta seria la infraestructura criptográfica avanzada para garantizar integridad, confidencialidad y no repudio. Este lo que hace es implementar el cifrado end-to-end, anonimato del voto, validaciones mancomunadas con llaves distribuidas, y auditoría completa sin comprometer privacidad.
+5. Organizaciones y Tipos: Este grupo es simplemente la gestión de entidades organizacionales que participan en el sistema. Esto permite el registro de instituciones, aceleradoras, incubadoras y grupos inversores. Define capacidades por tipo (crear propuestas, invertir, validar) y maneja representación organizacional.
+6. Propuestas: Aqui realizamos la gestión completa del ciclo de vida de propuestas desde creación hasta aprobación.
+7. Sistema de Votacion: Este es el motor central de votaciones con configuración flexible y resultados seguros. Hay configuracion de votaciones parametrizables, define poblaciones objetivo, garantiza anonimato del voto, y genera resultados segmentados para análisis demográfico.
+8. Comentarios y Fiscalizacion: Este seria el sistema de participación ciudadana y supervisión de proyectos. Este modelo permite comentarios validados por IA, fiscalización ciudadana de proyectos en ejecución, y reportes de irregularidades con evidencia.
+9. Inteligencia Artificial: Esta es la infraestructura de IA para automatización de validaciones y análisis. Basicamente automatiza validación de documentos, detección de fraude, análisis de propuestas, moderación de comentarios, y verificaciones biométricas.
+10. Validaciones Multi-Firma: Este grupo realiza la gestión de aprobaciones que requieren consenso de múltiples validadores. Aqui simplemente implementamos la aprobación mancomunada de 2 a 3 validadores con llaves distribuidas, firmas digitales, y consenso verificable.
+11. Notificaciones: Este es un agregado que es basicamente el sistema de comunicación y notificaciones del sistema. Lo que hace es gestionar comunicaciones sobre inicio de votaciones, recordatorios, resultados, y notificaciones de crowdfunding según configuración y segmentación.
+12. Transacciones y Pagos:
+13. Sistema (Logs, Media):
+
 
 ### 3.4 Descripcion de Tablas y Grupos Funcionales 
 En este apartado se explicaran las tablas de cada uno de los grupos funcionales, describiendo su funcionamiento y como operan.
